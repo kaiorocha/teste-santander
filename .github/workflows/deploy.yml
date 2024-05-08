@@ -31,9 +31,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   build:
-    environment:
-      name: homolog
-      url: ${{ steps.deployment.outputs.page_url }}
     permissions: write-all
     needs: sonarcloud
     runs-on: ubuntu-latest
